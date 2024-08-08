@@ -9,5 +9,10 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'colores';
+  color:string = 'red';
+  colores = ['yellow','black','red','purple','green'];
+  onclick(){
+    this.color = this.colores[Math.floor(Math.random() * (4 - 0 + 1))];
+    console.log(this.color);
+  }
 }
